@@ -1,10 +1,10 @@
-# ToDo list
+# CAPSTONE MOVIES
 
-Awesome ToDo list, Add your Takes and remove them if you like
+Awesome Movies list, you can add your movies, like them, and reserve them. 
 
 ## Live Demo
 
-[Click me](https://mov305.github.io/To-do-list/dist/)
+[NOT available yet]()
 
 ## Built With
 
@@ -33,11 +33,11 @@ Run the following commands to clone and run it.
 
 ### To clone the repository
 
-git clone https://github.com/Mov305/To-do
+git clone https://github.com/Mov305/moviesC2
 
 ### To enter Directory
 
-cd ToDoList
+cd moviesC2
 
 ### To Install Packages
 
@@ -54,6 +54,8 @@ code .
 ## Author
 
 GitHub:
+[@angeluray](https://github.com/angeluray)
+Linkedin: [Angel Uray](www.linkedin.com/in/angeluray-jobs)
 [@Mov305](https://github.com/Mov305)
 Linkedin: [Abdelrhman samy](https://www.linkedin.com/in/abdelrhman-samy-80b14b215/)
 
