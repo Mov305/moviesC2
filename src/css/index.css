@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Gill Sans', sans-serif;
+  height: 100vh;
+  justify-content: space-between;
+  font-size: larger;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid black;
+  width: calc(100% - 20px);
+  margin: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+#navList {
+  display: flex;
+  list-style-type: none;
+}
+
+#navList > li {
+  padding: 0 15px;
+  cursor: pointer;
+}
