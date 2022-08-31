@@ -1,29 +1,96 @@
 class Movies {
   BaseURL = 'https://api.tvmaze.com/search/shows?q=';
-  invURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ikULMDdkefW4ekGDByKD/'
+  invURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ikULMDdkefW4ekGDByKD/';
 
   async fetchMovies(search = 'marvel', page = '1') {
     const api = `${this.BaseURL}${search}&page=${page}`;
     try {
       const res = await fetch(api);
       const movies = await res.json();
-      const likes = await this.fetchInv('likes');
-      this.render(movies,likes);
-
+      const likes = await this.fetchInvLike('likes');
+      this.render(movies, likes);
     } catch (error) {
-      console.log(error,'errorapi1');
+      console.log(error, 'errorapi1');
     }
   }
 
-  async fetchInv(type) {
-    const api = `${this.invURL}${type}`
+  async fetchInvLike(type) {
+    const api = `${this.invURL}${type}`;
     try {
       const res = await fetch(api);
       const data = await res.json();
       return data;
-    }catch(error){
-      console.log(error,'error,api2')
+    } catch (error) {
+      console.log(error, 'error,api2');
     }
+  }
+
+  async postInvLike(id) {
+    try {
+      const req = await fetch(this.invURL + 'likes', {
+        method: 'POST',
+        body: JSON.stringify({ item_id: id }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+    } catch (error) {
+      console.log(error, 'err');
+    }
+  }
+
+  async GetComment(id) {
+    const api = `${this.invURL}comments?item_id=${id}`;
+    try {
+      const res = await fetch(api);
+      const data = await res.json();
+      if (data.length) {
+        this.renderComments(data);
+      }
+    } catch (error) {
+      console.log(error, 'error,comment');
+    }
+  }
+
+  async postComment(item_id, username, comment) {
+    try {
+      const req = await fetch(this.invURL + 'comments', {
+        method: 'POST',
+        body: JSON.stringify({ item_id, username, comment }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      this.GetComment(item_id);
+    } catch (error) {
+      console.log(error, 'err');
+    }
+  }
+
+  createComment(id) {
+    console.log('work');
+    commentBtn.onclick = () => {
+      if (myUser.value && myInputComment.value) {
+        this.postComment(id, myUser.value, myInputComment.value);
+        myUser.value = '';
+        myInputComment.value = '';
+      }
+    };
+  }
+
+  renderComments(comments) {
+    comments.forEach((ele) => {
+      const li = document.createElement('li');
+      const span = document.createElement('span');
+      const span2 = document.createElement('span');
+      span.className = 'commentName';
+      span2.className = 'commentInfo';
+      span.textContent = ele.username;
+      span2.textContent = ele.comment;
+
+      [span, span2].forEach((ele) => li.appendChild(ele));
+      myComments.appendChild(li);
+    });
   }
 
   renderBackground(movie) {
@@ -46,9 +113,10 @@ class Movies {
     viewMovie.onclick = () => {
       this.myShowsPopup(movie);
       popUp.classList.remove('hidden');
-      closePopup.onclick = ()=> popUp.classList.add('hidden');
+      closePopup.onclick = () => popUp.classList.add('hidden');
+      this.GetComment(movie.show.id);
+      this.createComment(movie.show.id);
     };
-
   }
 
   myShowsPopup = ({ show }) => {
@@ -76,31 +144,31 @@ class Movies {
     <div class"commentSection">
       <h3 class="commentTitle">Comments</h3>
       <ul id="myComments">
-      <li>hello</li>
-      <li>hello</li>
       </ul>
     </div>
 
     <div class="createComment">
       <h3 id="inputTitle">Add a Comment</h3>
-      <form action="#" method="POST" id="inputSection">
+      <div id="inputSection">
         <input id="myUser"type="text" placeholder="Your name" required>
         <textarea id="myInputComment" name="user_name" id="user-message" maxlength="500" placeholder="Your insights" required></textarea>
         <input type="submit" value="Comment" id="commentBtn">
-      </form>
+      </div>
     </div>
    </div>
   </section>
 </div>`;
   };
 
-  render(data) {
+  render(data, likes) {
     this.renderBackground(data[0]);
     data.forEach((movie) => {
+      const likeNum = likes.find((ele) => ele.item_id === movie.show.id);
       const li = document.createElement('li');
       const div = document.createElement('div');
       const div2 = document.createElement('div');
       const span = document.createElement('span');
+      const spanComment = document.createElement('span');
       const span2 = document.createElement('span');
       const span3 = document.createElement('span');
       const p = document.createElement('p');
@@ -111,8 +179,20 @@ class Movies {
       span.textContent = movie.show.status;
       p.textContent = movie.show.name;
       span2.textContent = movie.show.rating.average ? '⭐' + movie.show.rating.average : 'No Rate';
-      span3.textContent = '🖤❤️';
-      [span2, span3].forEach((ele) => div2.appendChild(ele));
+      span3.textContent = likeNum ? likeNum.likes + '❤️' : '🖤';
+      spanComment.textContent = '📝';
+      span3.onclick = () => {
+        this.postInvLike(movie.show.id);
+        span3.textContent = likeNum?.likes ? likeNum.likes + 1 + '❤️' : '1❤️';
+      };
+      spanComment.onclick = () => {
+        this.myShowsPopup(movie);
+        popUp.classList.remove('hidden');
+        closePopup.onclick = () => popUp.classList.add('hidden');
+        this.GetComment(movie.show.id);
+        this.createComment(movie.show.id);
+      };
+      [span2, spanComment, span3].forEach((ele) => div2.appendChild(ele));
       div.appendChild(div2);
       div.style.backgroundImage = movie.show.image
         ? `url(${movie.show.image.original})`

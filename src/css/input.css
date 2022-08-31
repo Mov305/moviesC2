@@ -56,7 +56,11 @@ main {
 }
 
 #listOfMovies > li > div > div > span {
-  @apply text-xs md:text-sm p-1 bg-[#5594958f] rounded-full border-cyan-400 border;
+  @apply text-xs md:text-sm p-1 bg-[#5594958f] rounded-full border-cyan-400 border transition-all ease-in-out duration-200;
+}
+
+#listOfMovies > li > div > div > span:hover {
+  @apply border-cyan-500 bg-[#3ffcffd4];
 }
 
 #listOfMovies > li > p {
@@ -79,4 +83,17 @@ main {
 
 #sec2 {
   @apply max-h-[90vh] overflow-y-scroll;
+}
+
+#myComments > li{
+  @apply flex flex-col;
+}
+
+
+.commentName {
+  @apply font-bold m-1;
+}
+
+.commentInfo {
+  @apply m-1;
 }

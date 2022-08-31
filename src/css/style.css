@@ -575,16 +575,16 @@ video {
   z-index: -10;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
 .z-20 {
   z-index: 20;
 }
 
 .z-10 {
   z-index: 10;
-}
-
-.z-40 {
-  z-index: 40;
 }
 
 .mx-1 {
@@ -606,24 +606,16 @@ video {
   margin-top: 1rem;
 }
 
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
 .mt-\[3px\] {
   margin-top: 3px;
 }
 
-.mt-40 {
-  margin-top: 10rem;
-}
-
-.mt-32 {
-  margin-top: 8rem;
-}
-
 .mt-20 {
   margin-top: 5rem;
-}
-
-.mr-3 {
-  margin-right: 0.75rem;
 }
 
 .flex {
@@ -995,6 +987,9 @@ main {
   padding: 0.25rem;
   font-size: 0.75rem;
   line-height: 1rem;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (min-width: 768px) {
@@ -1002,6 +997,12 @@ main {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+}
+
+#listOfMovies > li > div > div > span:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(6 182 212 / var(--tw-border-opacity));
+  background-color: #3ffcffd4;
 }
 
 #listOfMovies > li > p {
@@ -1059,6 +1060,20 @@ main {
 #sec2 {
   max-height: 90vh;
   overflow-y: scroll;
+}
+
+#myComments > li {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentName {
+  margin: 0.25rem;
+  font-weight: 700;
+}
+
+.commentInfo {
+  margin: 0.25rem;
 }
 
 .focus-visible\:border-slate-700:focus-visible {
