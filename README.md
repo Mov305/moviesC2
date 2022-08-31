@@ -4,7 +4,7 @@ Awesome Movies list, you can add your movies, like them, and reserve them.
 
 ## Live Demo
 
-[NOT available yet]()
+[Movies App](https://mov305.github.io/moviesC2/)
 
 ## Built With
 
