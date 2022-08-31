@@ -6,6 +6,7 @@ class Movies {
     try {
       const res = await fetch(api);
       const movies = await res.json();
+      return movies;
       this.render(movies);
     } catch (error) {
       console.log(error);
@@ -58,5 +59,4 @@ class Movies {
 }
 
 const movies = new Movies();
-
 export default movies;
