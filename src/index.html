@@ -15,18 +15,29 @@
 
       <div class="mx-1 flex sm:mx-3 md:w-[57%] gap-5 cursor-pointer justify-end">
         <div class="hidden md:flex bg-slate-900 rounded-2xl text-xl gap-1 p-2 h-16 items-center">
-          <p class=" font-bold">Top Movies</p>
+          <p class="font-bold">Top Movies</p>
           <span class="bg-[#00ADB5] rounded-xl">📶</span>
         </div>
         <div id="inputField" class="relative grow">
-          <input id="searchInput" placeholder="Search" type="text" class=" w-40 sm:w-full focus-visible:border-slate-700 focus-visible:outline-gray-600 focus-visible:text-slate-200" />
+          <input id="searchInput" placeholder="Search" type="text" class="w-40 sm:w-full focus-visible:border-slate-700 focus-visible:outline-gray-600 focus-visible:text-slate-200" />
           <span class="absolute select-none z-10 right-0 cursor-pointer text-2xl mt-[3px] bg-[#00ADB5] rounded-xl sm:scale-150 sm:mt-4 sm:mr-3" id="searchIcon">🔍</span>
         </div>
       </div>
     </nav>
-    <main id="main">
-      <section id="sec1" class="">
-        <h1>Movies list</h1>
+    <main id="main" class="flex flex-col lg:flex-row">
+      <section id="sec1" class="lg:w-[40%] p-6">
+        <a id="movieChannel" class="bg-[#0a57565a] rounded-full p-2 backdrop-blur-sm md:text-2xl lg:text-3xl" href="#" target="_blank">Channel</a>
+        <div class="rounded-xl my-5 p-2 backdrop-blur-[1px] w-fit gap-2">
+          <h2 id="movieName" class="text-2xl sm:text-4xl lg:text-5xl font-bold">name</h2>
+          <div class="flex flex-col my-3">
+            <img id="imdb" class="w-12 lg:w-16" src="#" alt="imdb" />
+            <div><span class="text-2xl sm:text-4xl lg:text-5xl" id="movieRate"></span><span>/10</span></div>
+          </div>
+          <ul id="movieGenre" class="flex gap-2 text-sm sm:text-lg lg:text-xl"></ul>
+          <div id="viewMovie">View</div>
+        </div>
+      </section>
+      <section id="sec2" class="lg:w-[60%] p-6">
         <ul id="listOfMovies"></ul>
       </section>
     </main>
