@@ -34,7 +34,8 @@ body {
   /* position: fixed; */
   top: 0;
   left: 0;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 .popUpWindow {
@@ -157,6 +158,34 @@ input[type=text] {
   transition: all 0.1s ease;
 }
 
+input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input::-moz-placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input::-ms-input-placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+
 input::placeholder {
   color: #fff;
   font-size: 15px;
@@ -173,6 +202,34 @@ textarea {
   background-color: rgba(0, 0, 0, 0.105);
   color: #fff;
   outline: none;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+
+textarea::-moz-placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+
+textarea:-ms-input-placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+
+textarea::-ms-input-placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
 }
 
 textarea::placeholder {
@@ -282,9 +339,11 @@ input[type=submit]:active {
       box-shadow: 0 1px 20px rgb(167, 153, 146);
       position: relative;
       display: inline-block;
-      filter: brightness(30%);
+      -webkit-filter: brightness(30%);
+              filter: brightness(30%);
       transition: all 0.5s ease;
-      object-fit: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
     }
 
     .popupImg:hover {
@@ -342,6 +401,22 @@ input[type=submit]:active {
       border: 3px solid rgb(255, 145, 0);
     }
 
+    input::-webkit-input-placeholder {
+      font-size: 12px;
+    }
+
+    input::-moz-placeholder {
+      font-size: 12px;
+    }
+
+    input:-ms-input-placeholder {
+      font-size: 12px;
+    }
+
+    input::-ms-input-placeholder {
+      font-size: 12px;
+    }
+
     input::placeholder {
       font-size: 12px;
     }
@@ -361,6 +436,22 @@ input[type=submit]:active {
       font-size: 12px;
       font-weight: 700;
       transition: all 0.5s ease;
+    }
+
+    textarea::-webkit-input-placeholder {
+      font-size: 12px;
+    }
+
+    textarea::-moz-placeholder {
+      font-size: 12px;
+    }
+
+    textarea:-ms-input-placeholder {
+      font-size: 12px;
+    }
+
+    textarea::-ms-input-placeholder {
+      font-size: 12px;
     }
 
     textarea::placeholder {
