@@ -6,23 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies</title>
   </head>
-  <body>
-    <nav>
-      <h4>Movies</h4>
-      <ul id="navList">
-        <li class="active">List</li> 
-        <li>List</li>
-        <li>List</li>
-      </ul>
+  <body class="bg-slate-800 text-white overflow-x-hidden">
+    <nav class="w-full flex justify-between items-center sm:px-[6%]">
+      <div class="flex items-center">
+        <img class="w-24 sm:w-32" src="#" id="logo" alt="logo" />
+        <h4 class="text-3xl sm:text-4xl md:text-5xl mt-4 font-bold leading-6">MV</h4>
+      </div>
+
+      <div class="mx-1 flex sm:mx-3 md:w-[57%] gap-5 cursor-pointer justify-end">
+        <div class="hidden md:flex bg-slate-900 rounded-2xl text-xl gap-1 p-2 h-16 items-center">
+          <p class=" font-bold">Top Movies</p>
+          <span class="bg-[#00ADB5] rounded-xl">📶</span>
+        </div>
+        <div id="inputField" class="relative grow">
+          <input id="searchInput" placeholder="Search" type="text" class=" w-40 sm:w-full focus-visible:border-slate-700 focus-visible:outline-gray-600 focus-visible:text-slate-200" />
+          <span class="absolute select-none z-10 right-0 cursor-pointer text-2xl mt-[3px] bg-[#00ADB5] rounded-xl sm:scale-150 sm:mt-4 sm:mr-3" id="searchIcon">🔍</span>
+        </div>
+      </div>
     </nav>
-    <main>
+    <main id="main">
       <section id="sec1" class="">
         <h1>Movies list</h1>
         <ul id="listOfMovies"></ul>
       </section>
     </main>
     <footer>
-      <p>Copyrights  <span>...</span> </p>
+      <p>Copyrights <span>...</span></p>
     </footer>
   </body>
 </html>

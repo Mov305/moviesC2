@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+#searchInput {
+  @apply bg-slate-900 pl-1 rounded-xl transition-all ease-in-out duration-200 h-10 sm:h-16 sm:rounded-2xl;
+}
+
+#inputField {
+  @apply transition-all ease-in-out duration-200;
+}
+
+.inputHide {
+  @apply scale-x-0 opacity-0;
+}
+
+main {
+  @apply w-full grow bg-contain sm:bg-cover bg-no-repeat md:bg-center rounded-b-[3rem];
+}
+
+#listOfMovies {
+  @apply flex list-none p-0 flex-wrap gap-2 md:gap-5 justify-center;
+}
+
+#listOfMovies > li {
+  @apply w-32 sm:w-44 lg:w-52 flex flex-col items-center cursor-pointer transition-all ease-in-out duration-200;
+}
+
+#listOfMovies > li:hover > div {
+  @apply shadow-sm shadow-cyan-400;
+}
+
+#listOfMovies > li:hover {
+  @apply scale-105;
+}
+
+#listOfMovies > li > span {
+  @apply translate-y-[50%] whitespace-nowrap overflow-hidden overflow-ellipsis max-w-[8rem] sm:max-w-[10rem] bg-[#00ADB5] text-sm sm:text-lg border-2 sm:border-[4px] border-black p-1 sm:p-2 rounded-full;
+}
+
+#listOfMovies > li > div {
+  @apply w-32 h-48 sm:w-44 sm:h-60 lg:w-52 lg:h-72 bg-cover bg-no-repeat rounded-3xl border border-[#00ADB5];
+
+  background-size: 100% 100%;
+}
+
+#listOfMovies > li > p {
+  @apply text-center;
+}
