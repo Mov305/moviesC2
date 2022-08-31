@@ -63,16 +63,18 @@ nav {
 }
 
 .popupImg {
-  width: 35%;
+  width: 37%;
   box-shadow: 0 1px 10px rgb(167, 153, 146);
 }
 
 .showContent {
-  padding: 15px;
-  width: 60%;
+  padding: 22px 25px 0px 18px;
+  width: 70%;
+  height: 87vh;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: rgba(0, 0, 0, 0.297);
 }
 
 .showInfo {
@@ -83,7 +85,7 @@ nav {
   font-size: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .showTitle {
@@ -95,14 +97,18 @@ nav {
 }
 
 .showDates {
-  width: 45%;
-  padding: 5px;
+  width: 47%;
+  padding: 2px;
+  margin-left: 5px;
   text-align: center;
   font-size: 13px;
   font-weight: lighter;
   color: #fff;
-  background-color: rgb(255, 134, 36);
+  background-color: rgb(219, 98, 0);
   border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .commentSection {
@@ -117,13 +123,13 @@ nav {
 
 #myComments {
   height: 70px;
-  width: 70%;
+  width: 98%;
   overflow-y: scroll;
   padding: 5px;
 }
 
 #myComments li {
-  background-color: rgba(255, 255, 255, 0.162);
+  background-color: rgb(219, 98, 0);
   color: #fff;
   margin-bottom: 5px;
   padding: 3px 18px 5px;
@@ -186,7 +192,7 @@ textarea::placeholder {
 
 input[type=submit] {
   width: 22%;
-  background-color: rgb(255, 134, 36);
+  background-color: rgb(255, 136, 38);
   color: #fff;
   margin-top: 5px;
   padding: 8px;
@@ -197,11 +203,11 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: rgb(227, 120, 33);
+  background-color: rgb(222, 130, 55);
 }
 
 input[type=submit]:active {
-  background-color: rgb(219, 98, 0);
+  background-color: rgb(206, 93, 0);
 }
 
 ::-webkit-scrollbar {
@@ -219,25 +225,84 @@ input[type=submit]:active {
   }
   
   ::-webkit-scrollbar-thumb:hover {
-  background:rgb(227, 120, 33);
+  background:rgb(255, 255, 255);
+  }
+
+  .closeIcon {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+  }
+
+  .rate {
+    width: 37px;
+  }
+
+  .moreInfo {
+    font-size: 12px;
+    display: flex;
+    width: 98%;
+    gap: 15px;
+    padding: 7px;
+  }
+
+  .showRate {
+    display: flex;
+    align-items: center;
+    padding: 2px 3px 2px 3px;
+    font-size: 12px;
+    gap: 5px;
+    color: #fff;
+    background-color: rgb(219, 98, 0);
+    border-radius: 40px;
+  }
+
+  .rNumber {
+    font-size: 15px;
+  }
+
+  .hideDesk {
+    display: none;
   }
 
   @media only screen and (max-width: 768px) {
     .popUpWindow {
-      width: 76%;
-      max-height: 95%;
+      width: 78%;
+      max-height: 98%;
       flex-direction: column;
+      padding: 0px;
     }
 
     .showContent {
       padding: 15px;
       width: 100%;
+      height: 40vh;
       gap: 10px;
+      position: absolute;
+      top: 130px;
+      background-color: rgba(0, 0, 0, 0);
     }
 
     .popupImg {
-      width: 35%;
+      width: 100%;
+      height: 93.5vh;
       box-shadow: 0 1px 20px rgb(167, 153, 146);
+      position: relative;
+      display: inline-block;
+      filter: brightness(30%);
+      transition: all 0.5s ease;
+      object-fit: cover;
+    }
+
+    .popupImg:hover {
+      transform: scale(1.05);
+    }
+
+      .closeIcon {
+      position: absolute;
+      top: 17px;
+      right: 30px;
     }
 
     .showInfo {
@@ -249,8 +314,8 @@ input[type=submit]:active {
     }
 
     .showDates {
-      width: 70%;
-      padding: 5px;
+      width: 60%;
+      padding: 2px;
       font-size: 10px;
     }
 
@@ -268,7 +333,7 @@ input[type=submit]:active {
 
     #myComments li {
       margin-bottom: 4px;
-      padding: 1px 18px 1px;
+      padding: 2px 18px 2px;
       border-radius: 40px;
       font-size: 11px;
     }
@@ -281,6 +346,8 @@ input[type=submit]:active {
     input[type=text] {
       width: 100%;
       padding: 5px;
+      background-color: rgba(255, 128, 0, 0.53);
+      border: 3px solid rgb(255, 145, 0);
     }
 
     input::placeholder {
@@ -288,14 +355,16 @@ input[type=submit]:active {
     }
     
     #myInputComment {
-      height: 40px;
+      height: 70px;
       padding: 5px;
+      background-color: rgba(255, 128, 0, 0.53);
+      border: 3px solid rgb(255, 145, 0);
     }
 
     input[type=submit] {
       width: 22%;
       margin-top: 2px;
-      padding: 6px;
+      padding: 9px;
       border: none;
       font-size: 12px;
       font-weight: 700;
@@ -304,5 +373,41 @@ input[type=submit]:active {
 
     textarea::placeholder {
       font-size: 12px;
+    }
+
+    .rate {
+      width: 20px;
+    }
+  
+    .moreInfo {
+      font-size: 11px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 7px;
+      padding: 1px;
+    }
+  
+    .showRate {
+      display: flex;
+      align-items: center;
+      padding: 2px 3px 2px 3px;
+      font-size: 10px;
+      gap: 2px;
+      color: #fff;
+      background-color: rgb(219, 98, 0);
+      border-radius: 40px;
+    }
+  
+    .rNumber {
+      font-size: 12px;
+    }
+
+    .hideDesk {
+      display: flex;
+    }
+
+    .hideMob {
+      display: none;
     }
   }

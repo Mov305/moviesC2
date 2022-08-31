@@ -15,12 +15,22 @@ const myShowsPopup = async () => {
     myBody.innerHTML = `<div class="popupBackground">
     <section class="popUpWindow">
       <img src="${show.show.image.original}" alt="#" class="popupImg">
-
+      <div class="closeIcon">
+      <img src="https://img.icons8.com/color/48/000000/delete-sign--v1.png"/>
+      </div>
       <div class="showContent">
       <div class="showInfo">
       <h2 class="showTitle">${show.show.name}</h2>
       <p id="mySum">${show.show.summary}</p>
-      <p class="showDates">Premiered : ${show.show.premiered} - Ended : ${show.show.ended}</p>
+      <div class="moreInfo">
+          <p class="showRate rNumber"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/64/000000/external-rate-customer-feedback-flaticons-flat-circular-flat-icons.png" class="rate"/>Rating : ${show.show.rating.average}</p>
+          <p class="showRate"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/64/000000/external-live-tv-live-streaming-flaticons-flat-circular-flat-icons.png" class="rate"/>Genres : ${show.show.genres}</p>
+          <p class="showRate"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/64/000000/external-on-air-live-streaming-flaticons-flat-circular-flat-icons.png" class="rate"/>Language : ${show.show.language}</p>
+          <p class="showDates hideDesk"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/64/000000/external-estimate-engineering-flaticons-flat-circular-flat-icons.png" class="rate"/>
+          Premiered : ${show.show.premiered} - Ended : ${show.show.ended}</p>
+      </div>
+      <p class="showDates hideMob"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/64/000000/external-estimate-engineering-flaticons-flat-circular-flat-icons.png" class="rate"/>
+        Premiered : ${show.show.premiered} - Ended : ${show.show.ended}</p>
       </div>
 
       <div class"commentSection">
@@ -64,7 +74,7 @@ const myShowsPopup = async () => {
       }
     };
 
-      const displayComments = () => {
+    const displayComments = () => {
       const myListComments = sendComment();
       myCommentList.innerHTML = '';
       myListComments.forEach((showC) => {
@@ -77,6 +87,9 @@ const myShowsPopup = async () => {
       displayComments();
       sendComment();
     });
+    document.querySelector('.closeIcon').addEventListener('click', (e) => {
+        console.log('here');
+      });
   });
 };
 
