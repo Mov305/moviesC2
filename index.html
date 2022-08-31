@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.png"><script defer src="main.bundle.js"></script></head>
+  <body class="bg-slate-800 text-white overflow-x-hidden">
+    <div id="main" class="fixed w-full h-screen -z-10"> </div>
+    <div id="popUp" class=" hidden fixed z-40 w-full h-screen"></div>
+    <nav class="w-full fixed z-20 top-0 flex justify-between items-center sm:px-[6%]  backdrop-blur">
+      <div class="flex items-center">
+        <img class="w-24 sm:w-32" src="#" id="logo" alt="logo" />
+        <h4 class="text-3xl sm:text-4xl md:text-5xl mt-4 font-bold leading-6">MV</h4>
+      </div>
+
+      <div class="mx-1 flex sm:mx-3 md:w-[57%] gap-5 cursor-pointer justify-end">
+        <div class="hidden md:flex bg-slate-900 rounded-2xl text-xl gap-1 p-2 h-16 items-center">
+          <p class="font-bold">Top Movies</p>
+          <span class="bg-[#00ADB5] rounded-xl">📶</span>
+        </div>
+        <div id="inputField" class="relative grow mr-3">
+          <input id="searchInput" placeholder="Search" type="text" class="w-40 sm:w-full focus-visible:border-slate-700 focus-visible:outline-gray-600 focus-visible:text-slate-200" />
+          <span class="absolute select-none z-10 right-0 cursor-pointer text-2xl mt-[3px] bg-[#00ADB5] rounded-xl sm:scale-150 sm:mt-4 sm:mr-3" id="searchIcon">🔍</span>
+        </div>
+      </div>
+    </nav>
+    <main class="flex flex-col lg:flex-row p-6 sm:p-[5%] mt-20">
+      <section id="sec1" class="lg:w-[40%]">
+        <a id="movieChannel" class="bg-[#0a57565a] p-1 sm:p-2 rounded-full  backdrop-blur-sm md:text-2xl lg:text-3xl" href="#" target="_blank">Channel</a>
+        <div class="rounded-xl my-5  backdrop-blur-[1px] w-fit gap-2">
+          <h2 id="movieName" class="text-2xl sm:text-4xl lg:text-5xl font-bold">name</h2>
+          <div class="flex flex-col my-3">
+            <img id="imdb" class="w-12 lg:w-16" src="#" alt="imdb" />
+            <div><span class="text-2xl sm:text-4xl lg:text-5xl" id="movieRate"></span><span>/10</span></div>
+          </div>
+          <ul id="movieGenre" class="flex gap-2 text-sm sm:text-lg lg:text-xl"></ul>
+          <div id="viewMovie">View</div>
+        </div>
+      </section>
+      <section id="sec2" class="lg:w-[60%]">
+        <ul id="listOfMovies"></ul>
+      </section>
+    </main>
+    <footer>
+      <p>Copyrights <span>...</span></p>
+    </footer>
+    <script src="./javascript/index.js"></script>
+  </body>
+</html>
