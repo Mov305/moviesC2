@@ -50,7 +50,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.636);
-  box-shadow: 0 48px 48px rgb(137, 70, 37);
+  box-shadow: 0 48px 48px rgb(37, 137, 125);
   color: rgb(255, 255, 255);
   gap: 5px;
 }
@@ -62,18 +62,17 @@ body {
 
 .showContent {
   padding: 22px 25px 0px 18px;
-  width: 70%;
+  width: 60%;
   height: 87vh;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   background-color: rgba(0, 0, 0, 0.297);
 }
 
 .showInfo {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 1px;
   padding-top: 10px;
   font-size: 15px;
   padding-top: 10px;
@@ -90,14 +89,14 @@ body {
 }
 
 .showDates {
-  width: 47%;
+  width: 49%;
   padding: 2px;
   margin-left: 5px;
   text-align: center;
   font-size: 13px;
   font-weight: lighter;
   color: #fff;
-  background-color: rgb(219, 98, 0);
+  background-color: rgba(21, 169, 255, 0.314);
   border-radius: 40px;
   display: flex;
   align-items: center;
@@ -117,12 +116,11 @@ body {
 #myComments {
   height: 70px;
   width: 98%;
-  overflow-y: scroll;
   padding: 5px;
 }
 
 #myComments li {
-  background-color: rgb(219, 98, 0);
+  background-color: rgb(1, 75, 117);
   color: #fff;
   margin-bottom: 5px;
   padding: 3px 18px 5px;
@@ -152,7 +150,7 @@ input[type=text] {
   width: 100%;
   padding: 5px;
   color: #fff;
-  border: 1px solid rgb(255, 134, 36);
+  border: 1px solid rgb(21, 169, 255);
   outline: none;
   background-color: rgba(0, 0, 0, 0.105);
   transition: all 0.1s ease;
@@ -198,7 +196,7 @@ textarea {
   height: 100px;
   padding: 5px;
   resize: none;
-  border: 1px solid rgb(255, 134, 36);
+  border: 1px solid rgb(21, 169, 255);
   background-color: rgba(0, 0, 0, 0.105);
   color: #fff;
   outline: none;
@@ -241,7 +239,7 @@ textarea::placeholder {
 
 input[type=submit] {
   width: 22%;
-  background-color: rgb(255, 136, 38);
+  background-color: rgb(21, 169, 255);
   color: #fff;
   margin-top: 5px;
   padding: 8px;
@@ -252,11 +250,11 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: rgb(222, 130, 55);
+  background-color: rgb(87, 193, 255);
 }
 
 input[type=submit]:active {
-  background-color: rgb(206, 93, 0);
+  background-color: rgb(0, 103, 162);
 }
 
 ::-webkit-scrollbar {
@@ -303,7 +301,7 @@ input[type=submit]:active {
     font-size: 12px;
     gap: 5px;
     color: #fff;
-    background-color: rgb(219, 98, 0);
+    background-color: rgba(21, 169, 255, 0.314);
     border-radius: 40px;
   }
 
@@ -313,6 +311,11 @@ input[type=submit]:active {
 
   .hideDesk {
     display: none;
+  }
+
+  .myScrollContent {
+    height: 300px;
+    overflow-y: scroll;
   }
 
   @media only screen and (max-width: 768px) {
@@ -326,10 +329,10 @@ input[type=submit]:active {
     .showContent {
       padding: 15px;
       width: 100%;
-      height: 40vh;
+      height: 75vh;
       gap: 10px;
       position: absolute;
-      top: 130px;
+      top: 105px;
       background-color: rgba(0, 0, 0, 0);
     }
 
@@ -372,13 +375,13 @@ input[type=submit]:active {
 
     .commentTitle {
       font-size: 15px;
+      padding-top: 5px;
       padding-bottom: 3px;
     }
 
     #myComments {
       height: 40px;
       width: 100%;
-      overflow-y: scroll;
       padding: 3px;
     }
 
@@ -397,8 +400,8 @@ input[type=submit]:active {
     input[type=text] {
       width: 100%;
       padding: 5px;
-      background-color: rgba(255, 128, 0, 0.53);
-      border: 3px solid rgb(255, 145, 0);
+      background-color: rgba(21, 169, 255, 0.314);
+      border: 3px solid rgb(72, 188, 255);
     }
 
     input::-webkit-input-placeholder {
@@ -424,8 +427,8 @@ input[type=submit]:active {
     #myInputComment {
       height: 70px;
       padding: 5px;
-      background-color: rgba(255, 128, 0, 0.53);
-      border: 3px solid rgb(255, 145, 0);
+      background-color: rgba(21, 169, 255, 0.314);
+      border: 3px solid rgb(72, 188, 255);
     }
 
     input[type=submit] {
@@ -478,7 +481,6 @@ input[type=submit]:active {
       font-size: 10px;
       gap: 2px;
       color: #fff;
-      background-color: rgb(219, 98, 0);
       border-radius: 40px;
     }
   
@@ -492,5 +494,10 @@ input[type=submit]:active {
 
     .hideMob {
       display: none;
+    }
+
+    .myScrollContent {
+      height: 500px;
+      padding: 5px;
     }
   }

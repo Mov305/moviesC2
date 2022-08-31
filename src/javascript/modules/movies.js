@@ -127,8 +127,9 @@ class Movies {
     <img src="https://img.icons8.com/color/48/000000/delete-sign--v1.png"/>
     </div>
     <div class="showContent">
-    <div class="showInfo">
     <h2 class="showTitle">${show.name}</h2>
+    <div class="myScrollContent">
+    <div class="showInfo">
     <p id="mySum">${show.summary}</p>
     <div class="moreInfo">
         <p class="showRate rNumber"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/64/000000/external-rate-customer-feedback-flaticons-flat-circular-flat-icons.png" class="rate"/>Rating : ${show.rating.average}</p>
@@ -145,6 +146,7 @@ class Movies {
       <h3 class="commentTitle">Comments</h3>
       <ul id="myComments">
       </ul>
+    </div>
     </div>
 
     <div class="createComment">
