@@ -28,6 +28,7 @@ class Movies {
       li.textContent = genre;
       movieGenre.appendChild(li);
     });
+    main.classList.remove('opacity-20')
   }
 
   render(data) {
@@ -40,7 +41,7 @@ class Movies {
       const span2 = document.createElement('span');
       const span3 = document.createElement('span');
       const p = document.createElement('p');
-      li.onclick = () => this.renderBackground(movie);
+      li.onclick = () => {main.classList.add('opacity-20');setTimeout(()=>this.renderBackground(movie),300)};
       span.textContent = movie.show.status;
       p.textContent = movie.show.name;
       span2.textContent = movie.show.rating.average ? '⭐' + movie.show.rating.average : 'No Rate';

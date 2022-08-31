@@ -15,8 +15,13 @@
 }
 
 main {
-  @apply w-full grow bg-contain sm:bg-cover bg-no-repeat md:bg-center rounded-b-[3rem] bg-fixed;
+  @apply w-full grow;
+}
 
+#main {
+  @apply bg-contain sm:bg-cover bg-no-repeat md:bg-center rounded-b-[3rem] bg-fixed;
+
+  transition: all 0.3s ease-in-out;
   background-size: 100%;
 }
 
@@ -73,5 +78,5 @@ main {
 }
 
 #sec2 {
-    @apply max-h-[90vh] overflow-y-scroll;
+  @apply max-h-[90vh] overflow-y-scroll;
 }
