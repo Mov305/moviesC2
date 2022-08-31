@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Gill Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   height: 100vh;
   justify-content: space-between;
   font-size: larger;
@@ -33,3 +33,276 @@ nav {
   padding: 0 15px;
   cursor: pointer;
 }
+
+.popupBackground {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+  z-index: 1000;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+}
+
+.popUpWindow {
+  width: 76%;
+  max-height: 93%;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.636);
+  box-shadow: 0 48px 48px rgb(137, 70, 37);
+  color: rgb(255, 255, 255);
+  gap: 5px;
+}
+
+.popupImg {
+  width: 35%;
+  box-shadow: 0 1px 10px rgb(167, 153, 146);
+}
+
+.showContent {
+  padding: 15px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.showInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 10px;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+.showTitle {
+  font-size: 30px;
+}
+
+.showGenre {
+  font-size: 15px;
+}
+
+.showDates {
+  width: 45%;
+  padding: 5px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: lighter;
+  color: #fff;
+  background-color: rgb(255, 134, 36);
+  border-radius: 40px;
+}
+
+.commentSection {
+  margin: 30px;
+}
+
+.commentTitle {
+  font-size: 18px;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+}
+
+#myComments {
+  height: 70px;
+  width: 70%;
+  overflow-y: scroll;
+  padding: 5px;
+}
+
+#myComments li {
+  background-color: rgba(255, 255, 255, 0.162);
+  color: #fff;
+  margin-bottom: 5px;
+  padding: 3px 18px 5px;
+  border-radius: 40px;
+  font-size: 14px;
+}
+
+.createComment {
+  padding: 10px 10px 0px 0px;
+}
+
+#inputTitle {
+  font-size: 18px;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+  padding-bottom: 5px;
+}
+
+#inputSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 5px;
+  color: #fff;
+  border: 1px solid rgb(255, 134, 36);
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.105);
+  transition: all 0.1s ease;
+}
+
+input::placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  resize: none;
+  border: 1px solid rgb(255, 134, 36);
+  background-color: rgba(0, 0, 0, 0.105);
+  color: #fff;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input[type=submit] {
+  width: 22%;
+  background-color: rgb(255, 134, 36);
+  color: #fff;
+  margin-top: 5px;
+  padding: 8px;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.5s ease;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(227, 120, 33);
+}
+
+input[type=submit]:active {
+  background-color: rgb(219, 98, 0);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  background:rgba(255, 255, 255, 0.399); 
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+  background:rgb(227, 120, 33);
+  }
+
+  @media only screen and (max-width: 768px) {
+    .popUpWindow {
+      width: 76%;
+      max-height: 95%;
+      flex-direction: column;
+    }
+
+    .showContent {
+      padding: 15px;
+      width: 100%;
+      gap: 10px;
+    }
+
+    .popupImg {
+      width: 35%;
+      box-shadow: 0 1px 20px rgb(167, 153, 146);
+    }
+
+    .showInfo {
+      padding-top: 10px;
+      font-size: 2px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      font-size: 12px;
+    }
+
+    .showDates {
+      width: 70%;
+      padding: 5px;
+      font-size: 10px;
+    }
+
+    .commentTitle {
+      font-size: 15px;
+      padding-bottom: 3px;
+    }
+
+    #myComments {
+      height: 40px;
+      width: 100%;
+      overflow-y: scroll;
+      padding: 3px;
+    }
+
+    #myComments li {
+      margin-bottom: 4px;
+      padding: 1px 18px 1px;
+      border-radius: 40px;
+      font-size: 11px;
+    }
+
+    #inputTitle {
+      font-size: 15px;
+      padding-bottom: 3px;
+    }
+
+    input[type=text] {
+      width: 100%;
+      padding: 5px;
+    }
+
+    input::placeholder {
+      font-size: 12px;
+    }
+    
+    #myInputComment {
+      height: 40px;
+      padding: 5px;
+    }
+
+    input[type=submit] {
+      width: 22%;
+      margin-top: 2px;
+      padding: 6px;
+      border: none;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all 0.5s ease;
+    }
+
+    textarea::placeholder {
+      font-size: 12px;
+    }
+  }
