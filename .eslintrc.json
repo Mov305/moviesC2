@@ -17,7 +17,16 @@
     "linebreak-style": 0,
     "import/extensions": [ 1, {
       "js": "always", "json": "always"
-    }]
+    }],
+    "consistent-return":"off",
+    "no-console":"off",
+    "no-trailing-spaces":"off",
+    "no-undef":"off",
+    "prefer-template":"off",
+    "camelcase":"off",
+    "class-methods-use-this":"off",
+    "no-nested-ternary":"off",
+    "import/no-cycle":"off"
   },
   "ignorePatterns": [
     "dist/",

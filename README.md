@@ -1,10 +1,15 @@
-# CAPSTONE MOVIES
+# CAPSTONE MOVIES MV
 
-Awesome Movies list, you can add your movies, like them, and reserve them. 
+Movies MV , search for any movie and show by name and add it to your like list.
+See all the details about the movies and it's realse time. Comment and interact with other users. 
 
 ## Live Demo
 
-[NOT available yet]()
+[Movies App](https://mov305.github.io/moviesC2/dist/)
+
+## Introduction Video
+
+[Movies MV](https://youtu.be/2ux7ZDY3zmw)
 
 ## Built With
 
@@ -53,10 +58,14 @@ code .
 
 ## Author
 
-GitHub:
-[@angeluray](https://github.com/angeluray)
+#### Angel
+GitHub:[@angeluray](https://github.com/angeluray)
+<br>
 Linkedin: [Angel Uray](www.linkedin.com/in/angeluray-jobs)
-[@Mov305](https://github.com/Mov305)
+
+#### Abdelrhman
+GitHub:[@Mov305](https://github.com/Mov305)
+<br>
 Linkedin: [Abdelrhman samy](https://www.linkedin.com/in/abdelrhman-samy-80b14b215/)
 
 ## Contributing
