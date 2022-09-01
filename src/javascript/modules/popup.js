@@ -1,3 +1,0 @@
-
-
-export { myShowsPopup as default };

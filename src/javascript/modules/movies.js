@@ -1,9 +1,10 @@
 class Movies {
   BaseURL = 'https://api.tvmaze.com/search/shows?q=';
+
   invURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ikULMDdkefW4ekGDByKD/';
 
-  async fetchMovies(search = 'marvel', page = '1') {
-    const api = `${this.BaseURL}${search}&page=${page}`;
+  async fetchMovies(search = 'marvel') {
+    const api = `${this.BaseURL}${search}`;
     try {
       const res = await fetch(api);
       const movies = await res.json();
@@ -34,6 +35,8 @@ class Movies {
           'Content-Type': 'application/json',
         },
       });
+      const data = req.json();
+      return data;
     } catch (error) {
       console.log(error, 'err');
     }
@@ -64,6 +67,8 @@ class Movies {
       });
       this.GetComment(item_id);
       this.GetCommentNumber(item_id);
+      const data = req.json();
+      return data;
     } catch (error) {
       console.log(error, 'err');
     }
@@ -81,6 +86,7 @@ class Movies {
   }
 
   renderComments(comments) {
+    myComments.innerHTML = '';
     comments.forEach((ele) => {
       const li = document.createElement('li');
       const span = document.createElement('span');
@@ -101,10 +107,10 @@ class Movies {
         ? `linear-gradient(90deg, #1E293B, #0001,#000000c2,#000000d6, black), url(${movie.show.image.original})`
         : `linear-gradient(#1E293B,  #0001,#0009,#000000c2,#000000d6, black), url(${movie.show.image.original})`
       : 'linear-gradient( #1E293B, #0001,#0009,#000000c2,#000000d6, black), url(https://media.istockphoto.com/vectors/poster-template-with-retro-banner-design-for-presentation-concert-vector-id996101744?b=1&k=20&m=996101744&s=612x612&w=0&h=fHQFQ0stKZm0yagV9i0aYUdH2Wje-Js19-AqRSxhZ3k=)';
-    movieChannel.textContent = movie.show.webChannel ? movie.show.webChannel.name : 'N/A';
+    movieChannel.textContent = movie.show.webChannel ? movie.show.webChannel.name : '';
     movieChannel.href = movie.show.webChannel ? movie.show.webChannel.officialSite : '#';
     movieName.textContent = movie.show.name;
-    movieRate.textContent = movie.show.rating.average ? +movie.show.rating.average : 'N/A';
+    movieRate.textContent = movie.show.rating.average ? +movie.show.rating.average : '-';
     movieGenre.innerHTML = '';
     movie.show.genres.forEach((genre) => {
       const li = document.createElement('li');
@@ -145,6 +151,7 @@ class Movies {
     </div>
 
     <div id="commentSec" class"commentSection">
+      <div id="commentCount"> </div>
       <ul id="myComments">
       </ul>
     </div>
@@ -163,21 +170,15 @@ class Movies {
 </div>`;
   };
 
-  /* The code below is returning the exact number of comments,
-     but when you create a comment the "comments: amountOfNumbers" duplicates.
-  */
   GetCommentNumber(comments) {
-    let counter = 0;
-    comments.forEach((ele) => {
-      counter++
-      return counter
-    });
-    commentSec.insertAdjacentHTML('afterbegin', `<h3 class="commentTitle">Comments : ${counter}</h3>` ? `Comments : ${counter}` : `Comments : 0`);
+    const counter = comments.length || 0;
+    commentCount.textContent = 'Comment Count: ' + counter;
   }
-/* The code above must be improved */
 
   render(data, likes) {
     this.renderBackground(data[0]);
+    searchResult.textContent = 'Current Movies: ' + data.length;
+    listOfMovies.innerHTML = '';
     data.forEach((movie) => {
       const likeNum = likes.find((ele) => ele.item_id === movie.show.id);
       const li = document.createElement('li');
@@ -194,7 +195,7 @@ class Movies {
       };
       span.textContent = movie.show.status;
       p.textContent = movie.show.name;
-      span2.textContent = movie.show.rating.average ? '⭐' + movie.show.rating.average : 'No Rate';
+      span2.textContent = movie.show.rating.average ? '⭐' + movie.show.rating.average : 'NR';
       span3.textContent = likeNum ? likeNum.likes + '❤️' : '🖤';
       spanComment.textContent = '📝';
       span3.onclick = () => {

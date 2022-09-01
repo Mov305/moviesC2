@@ -15,7 +15,11 @@
 }
 
 main {
-  @apply w-full grow;
+  @apply w-full grow lg:justify-end;
+}
+
+#sec1 {
+  @apply lg:fixed lg:left-0 lg:pl-[6%];
 }
 
 #main {
@@ -26,7 +30,7 @@ main {
 }
 
 #listOfMovies {
-  @apply flex list-none p-0 flex-wrap gap-3 md:gap-5 justify-center;
+  @apply flex list-none p-0 flex-wrap gap-3 md:gap-5 justify-between lg:justify-center;
 }
 
 #listOfMovies > li {
@@ -82,13 +86,12 @@ main {
 }
 
 #sec2 {
-  @apply max-h-[90vh] overflow-y-scroll;
+  @apply mt-[-50px];
 }
 
-#myComments > li{
+#myComments > li {
   @apply flex flex-col;
 }
-
 
 .commentName {
   @apply font-bold m-1;
