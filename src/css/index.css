@@ -496,4 +496,203 @@ input[type='submit']:active {
     height: 500px;
     padding: 5px;
   }
-}
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .contact {
+    transition: 0.5s;
+  }
+
+  .contact:hover {
+    color: rgb(14, 179, 179);
+  }
+
+  @media only screen and (max-width: 768px) {
+    .popUpWindow {
+      width: 78%;
+      max-height: 98%;
+      flex-direction: column;
+      padding: 0px;
+    }
+
+    .showContent {
+      padding: 15px;
+      width: 100%;
+      height: 75vh;
+      gap: 10px;
+      position: absolute;
+      top: 105px;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    .popupImg {
+      width: 100%;
+      height: 93.5vh;
+      box-shadow: 0 1px 20px rgb(167, 153, 146);
+      position: relative;
+      display: inline-block;
+      -webkit-filter: brightness(30%);
+              filter: brightness(30%);
+      transition: all 0.5s ease;
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+
+    .popupImg:hover {
+      transform: scale(1.05);
+    }
+
+      .closeIcon {
+      position: absolute;
+      top: 17px;
+      right: 30px;
+    }
+
+    .showInfo {
+      padding-top: 10px;
+      font-size: 2px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      font-size: 12px;
+    }
+
+    .showDates {
+      width: 60%;
+      padding: 2px;
+      font-size: 10px;
+    }
+
+    .commentTitle {
+      font-size: 15px;
+      padding-top: 5px;
+      padding-bottom: 3px;
+    }
+
+    #myComments {
+      height: 40px;
+      width: 100%;
+      padding: 3px;
+    }
+
+    #myComments li {
+      margin-bottom: 4px;
+      padding: 2px 18px 2px;
+      border-radius: 40px;
+      font-size: 11px;
+    }
+
+    #inputTitle {
+      font-size: 15px;
+      padding-bottom: 3px;
+    }
+
+    input[type=text] {
+      width: 100%;
+      padding: 5px;
+      background-color: rgba(21, 169, 255, 0.314);
+      border: 3px solid rgb(72, 188, 255);
+    }
+
+    input::-webkit-input-placeholder {
+      font-size: 12px;
+    }
+
+    input::-moz-placeholder {
+      font-size: 12px;
+    }
+
+    input:-ms-input-placeholder {
+      font-size: 12px;
+    }
+
+    input::-ms-input-placeholder {
+      font-size: 12px;
+    }
+
+    input::placeholder {
+      font-size: 12px;
+    }
+    
+    #myInputComment {
+      height: 70px;
+      padding: 5px;
+      background-color: rgba(21, 169, 255, 0.314);
+      border: 3px solid rgb(72, 188, 255);
+    }
+
+    input[type=submit] {
+      width: 22%;
+      margin-top: 2px;
+      padding: 9px;
+      border: none;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all 0.5s ease;
+    }
+
+    textarea::-webkit-input-placeholder {
+      font-size: 12px;
+    }
+
+    textarea::-moz-placeholder {
+      font-size: 12px;
+    }
+
+    textarea:-ms-input-placeholder {
+      font-size: 12px;
+    }
+
+    textarea::-ms-input-placeholder {
+      font-size: 12px;
+    }
+
+    textarea::placeholder {
+      font-size: 12px;
+    }
+
+    .rate {
+      width: 20px;
+    }
+  
+    .moreInfo {
+      font-size: 11px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 7px;
+      padding: 1px;
+    }
+  
+    .showRate {
+      display: flex;
+      align-items: center;
+      padding: 2px 3px 2px 3px;
+      font-size: 10px;
+      gap: 2px;
+      color: #fff;
+      border-radius: 40px;
+    }
+  
+    .rNumber {
+      font-size: 12px;
+    }
+
+    .hideDesk {
+      display: flex;
+    }
+
+    .hideMob {
+      display: none;
+    }
+
+    .myScrollContent {
+      height: 500px;
+      padding: 5px;
+    }
+  }
+
