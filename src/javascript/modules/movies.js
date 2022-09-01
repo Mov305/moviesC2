@@ -46,6 +46,7 @@ class Movies {
       const data = await res.json();
       if (data.length) {
         this.renderComments(data);
+        this.GetCommentNumber(data);
       }
     } catch (error) {
       console.log(error, 'error,comment');
@@ -62,6 +63,7 @@ class Movies {
         },
       });
       this.GetComment(item_id);
+      this.GetCommentNumber(item_id);
     } catch (error) {
       console.log(error, 'err');
     }
@@ -142,8 +144,7 @@ class Movies {
       Premiered : ${show.premiered} - Ended : ${show.ended}</p>
     </div>
 
-    <div class"commentSection">
-      <h3 class="commentTitle">Comments</h3>
+    <div id="commentSec" class"commentSection">
       <ul id="myComments">
       </ul>
     </div>
@@ -161,6 +162,19 @@ class Movies {
   </section>
 </div>`;
   };
+
+  /* The code below is returning the exact number of comments,
+     but when you create a comment the "comments: amountOfNumbers" duplicates.
+  */
+  GetCommentNumber(comments) {
+    let counter = 0;
+    comments.forEach((ele) => {
+      counter++
+      return counter
+    });
+    commentSec.insertAdjacentHTML('afterbegin', `<h3 class="commentTitle">Comments : ${counter}</h3>` ? `Comments : ${counter}` : `Comments : 0`);
+  }
+/* The code above must be improved */
 
   render(data, likes) {
     this.renderBackground(data[0]);
