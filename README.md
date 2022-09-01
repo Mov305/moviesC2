@@ -1,6 +1,7 @@
-# CAPSTONE MOVIES
+# CAPSTONE MOVIES MV
 
-Awesome Movies list, you can add your movies, like them, and reserve them. 
+Movies MV , search for any movie and show by name and add it to your like list.
+See all the details about the movies and it's realse time. Comment and interact with other users. 
 
 ## Live Demo
 
