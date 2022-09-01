@@ -318,6 +318,21 @@ input[type=submit]:active {
     overflow-y: scroll;
   }
 
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .contact {
+    transition: 0.5s;
+  }
+
+  .contact:hover {
+    color: rgb(14, 179, 179);
+  }
+
   @media only screen and (max-width: 768px) {
     .popUpWindow {
       width: 78%;
