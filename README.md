@@ -58,12 +58,14 @@ code .
 
 ## Author
 
-### Angel
+#### Angel
 GitHub:[@angeluray](https://github.com/angeluray)
+<br>
 Linkedin: [Angel Uray](www.linkedin.com/in/angeluray-jobs)
 
-### Abdelrhman
+#### Abdelrhman
 GitHub:[@Mov305](https://github.com/Mov305)
+<br>
 Linkedin: [Abdelrhman samy](https://www.linkedin.com/in/abdelrhman-samy-80b14b215/)
 
 ## Contributing
