@@ -31,7 +31,6 @@ body {
   height: 100%;
   background-color: rgb(0 0 0 / 70%);
   z-index: 1000;
-  /* position: fixed; */
   top: 0;
   left: 0;
   -webkit-backdrop-filter: blur(10px);
@@ -61,7 +60,7 @@ body {
 }
 
 .showContent {
-  padding: 22px 25px 0px 18px;
+  padding: 22px 25px 0 18px;
   width: 60%;
   height: 87vh;
   display: flex;
@@ -73,8 +72,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1px;
-  padding-top: 10px;
-  font-size: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 13px;
@@ -129,7 +126,7 @@ body {
 }
 
 .createComment {
-  padding: 10px 10px 0px 0px;
+  padding: 10px 10px 0 0;
 }
 
 #inputTitle {
@@ -170,14 +167,14 @@ input::-moz-placeholder {
   font-family: 'Open Sans', sans-serif;
 }
 
-input:-ms-input-placeholder {
+input::-ms-input-placeholder {
   color: #fff;
   font-size: 15px;
   font-weight: 100;
   font-family: 'Open Sans', sans-serif;
 }
 
-input::-ms-input-placeholder {
+input:-ms-input-placeholder {
   color: #fff;
   font-size: 15px;
   font-weight: 100;
@@ -216,14 +213,14 @@ textarea::-moz-placeholder {
   font-family: 'Open Sans', sans-serif;
 }
 
-textarea:-ms-input-placeholder {
+textarea::-ms-input-placeholder {
   color: #fff;
   font-size: 15px;
   font-weight: 100;
   font-family: 'Open Sans', sans-serif;
 }
 
-textarea::-ms-input-placeholder {
+textarea:-ms-input-placeholder {
   color: #fff;
   font-size: 15px;
   font-weight: 100;
@@ -323,7 +320,7 @@ input[type='submit']:active {
     width: 78%;
     max-height: 98%;
     flex-direction: column;
-    padding: 0px;
+    padding: 0;
   }
 
   .showContent {
@@ -360,10 +357,8 @@ input[type='submit']:active {
   }
 
   .showInfo {
-    padding-top: 10px;
-    font-size: 2px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
     font-size: 12px;
   }
 
@@ -397,7 +392,7 @@ input[type='submit']:active {
     padding-bottom: 3px;
   }
 
-  input[type='text'] {
+  input[type=text] {
     width: 100%;
     padding: 5px;
     background-color: rgba(21, 169, 255, 0.314);
@@ -411,12 +406,12 @@ input[type='submit']:active {
   input::-moz-placeholder {
     font-size: 12px;
   }
-
-  input:-ms-input-placeholder {
+  
+  input::-ms-input-placeholder {
     font-size: 12px;
   }
 
-  input::-ms-input-placeholder {
+  input:-ms-input-placeholder {
     font-size: 12px;
   }
 
@@ -431,7 +426,8 @@ input[type='submit']:active {
     border: 3px solid rgb(72, 188, 255);
   }
 
-  input[type='submit'] {
+
+  input[type=submit] {
     width: 22%;
     margin-top: 2px;
     padding: 9px;
@@ -449,11 +445,11 @@ input[type='submit']:active {
     font-size: 12px;
   }
 
-  textarea:-ms-input-placeholder {
+  textarea::-ms-input-placeholder {
     font-size: 12px;
   }
 
-  textarea::-ms-input-placeholder {
+  textarea:-ms-input-placeholder {
     font-size: 12px;
   }
 
