@@ -57,10 +57,12 @@ code .
 
 ## Author
 
-GitHub:
-[@angeluray](https://github.com/angeluray)
+### Angel
+GitHub:[@angeluray](https://github.com/angeluray)
 Linkedin: [Angel Uray](www.linkedin.com/in/angeluray-jobs)
-[@Mov305](https://github.com/Mov305)
+
+### Abdelrhman
+GitHub:[@Mov305](https://github.com/Mov305)
 Linkedin: [Abdelrhman samy](https://www.linkedin.com/in/abdelrhman-samy-80b14b215/)
 
 ## Contributing
