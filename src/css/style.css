@@ -674,6 +674,10 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -745,6 +749,14 @@ video {
   padding: 0.25rem;
 }
 
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -767,6 +779,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .leading-6 {
@@ -835,6 +851,18 @@ main {
   flex-grow: 1;
 }
 
+@media (min-width: 1024px) {
+  main {
+    justify-content: flex-end;
+  }
+
+  #sec1 {
+    position: fixed;
+    left: 0px;
+    padding-left: 6%;
+  }
+}
+
 #main {
   border-bottom-right-radius: 3rem;
   border-bottom-left-radius: 3rem;
@@ -864,7 +892,7 @@ main {
   display: flex;
   list-style-type: none;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 0.75rem;
   padding: 0px;
 }
@@ -872,6 +900,12 @@ main {
 @media (min-width: 768px) {
   #listOfMovies {
     gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #listOfMovies {
+    justify-content: center;
   }
 }
 
@@ -1058,8 +1092,7 @@ main {
 }
 
 #sec2 {
-  max-height: 90vh;
-  overflow-y: scroll;
+  margin-top: -50px;
 }
 
 #myComments > li {
