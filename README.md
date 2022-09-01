@@ -6,6 +6,10 @@ Awesome Movies list, you can add your movies, like them, and reserve them.
 
 [Movies App](https://mov305.github.io/moviesC2/dist/)
 
+## Introduction Video
+
+[Movies MV](https://youtu.be/2ux7ZDY3zmw)
+
 ## Built With
 
 GitHub,

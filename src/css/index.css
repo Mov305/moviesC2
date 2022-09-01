@@ -392,7 +392,7 @@ input[type='submit']:active {
     padding-bottom: 3px;
   }
 
-  input[type=text] {
+  input[type='text'] {
     width: 100%;
     padding: 5px;
     background-color: rgba(21, 169, 255, 0.314);
@@ -406,7 +406,7 @@ input[type='submit']:active {
   input::-moz-placeholder {
     font-size: 12px;
   }
-  
+
   input::-ms-input-placeholder {
     font-size: 12px;
   }
@@ -426,8 +426,7 @@ input[type='submit']:active {
     border: 3px solid rgb(72, 188, 255);
   }
 
-
-  input[type=submit] {
+  input[type='submit'] {
     width: 22%;
     margin-top: 2px;
     padding: 9px;
@@ -517,7 +516,7 @@ input[type='submit']:active {
       width: 78%;
       max-height: 98%;
       flex-direction: column;
-      padding: 0px;
+      padding: 0;
     }
 
     .showContent {
@@ -537,17 +536,17 @@ input[type='submit']:active {
       position: relative;
       display: inline-block;
       -webkit-filter: brightness(30%);
-              filter: brightness(30%);
+      filter: brightness(30%);
       transition: all 0.5s ease;
       -o-object-fit: cover;
-         object-fit: cover;
+      object-fit: cover;
     }
 
     .popupImg:hover {
       transform: scale(1.05);
     }
 
-      .closeIcon {
+    .closeIcon {
       position: absolute;
       top: 17px;
       right: 30px;
@@ -555,9 +554,7 @@ input[type='submit']:active {
 
     .showInfo {
       padding-top: 10px;
-      font-size: 2px;
-      padding-top: 0px;
-      padding-bottom: 0px;
+      padding-bottom: 0;
       font-size: 12px;
     }
 
@@ -591,7 +588,7 @@ input[type='submit']:active {
       padding-bottom: 3px;
     }
 
-    input[type=text] {
+    input[type='text'] {
       width: 100%;
       padding: 5px;
       background-color: rgba(21, 169, 255, 0.314);
@@ -606,18 +603,18 @@ input[type='submit']:active {
       font-size: 12px;
     }
 
-    input:-ms-input-placeholder {
+    input::-ms-input-placeholder {
       font-size: 12px;
     }
 
-    input::-ms-input-placeholder {
+    input:-ms-input-placeholder {
       font-size: 12px;
     }
 
     input::placeholder {
       font-size: 12px;
     }
-    
+
     #myInputComment {
       height: 70px;
       padding: 5px;
@@ -625,7 +622,7 @@ input[type='submit']:active {
       border: 3px solid rgb(72, 188, 255);
     }
 
-    input[type=submit] {
+    input[type='submit'] {
       width: 22%;
       margin-top: 2px;
       padding: 9px;
@@ -643,11 +640,11 @@ input[type='submit']:active {
       font-size: 12px;
     }
 
-    textarea:-ms-input-placeholder {
+    textarea::-ms-input-placeholder {
       font-size: 12px;
     }
 
-    textarea::-ms-input-placeholder {
+    textarea:-ms-input-placeholder {
       font-size: 12px;
     }
 
@@ -658,7 +655,7 @@ input[type='submit']:active {
     .rate {
       width: 20px;
     }
-  
+
     .moreInfo {
       font-size: 11px;
       display: flex;
@@ -667,7 +664,7 @@ input[type='submit']:active {
       gap: 7px;
       padding: 1px;
     }
-  
+
     .showRate {
       display: flex;
       align-items: center;
@@ -677,7 +674,7 @@ input[type='submit']:active {
       color: #fff;
       border-radius: 40px;
     }
-  
+
     .rNumber {
       font-size: 12px;
     }
@@ -695,4 +692,4 @@ input[type='submit']:active {
       padding: 5px;
     }
   }
-
+}

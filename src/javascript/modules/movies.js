@@ -128,6 +128,9 @@ class Movies {
   }
 
   myShowsPopup = ({ show }) => {
+    const prem = show.premiered !== null ? show.premiered : 'Working';
+    const mEnd = show.ended !== null ? show.ended : 'Working';
+    const mRate = show.rating.average !== null ? show.rating.average : 'NR';
     popUp.innerHTML = `<div class="popupBackground">
   <section class="popUpWindow">
     <img src="${show.image?.original}" alt="#" class="popupImg">
@@ -140,14 +143,14 @@ class Movies {
     <div class="showInfo">
     <p id="mySum">${show.summary}</p>
     <div class="moreInfo">
-        <p class="showRate rNumber"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/64/000000/external-rate-customer-feedback-flaticons-flat-circular-flat-icons.png" class="rate"/>Rating : ${show.rating.average}</p>
+    <p class="showRate rNumber"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/64/000000/external-rate-customer-feedback-flaticons-flat-circular-flat-icons.png" class="rate"/>Rating : ${mRate}</p>
         <p class="showRate"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/64/000000/external-live-tv-live-streaming-flaticons-flat-circular-flat-icons.png" class="rate"/>Genres : ${show.genres}</p>
         <p class="showRate"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/64/000000/external-on-air-live-streaming-flaticons-flat-circular-flat-icons.png" class="rate"/>Language : ${show.language}</p>
         <p class="showDates hideDesk"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/64/000000/external-estimate-engineering-flaticons-flat-circular-flat-icons.png" class="rate"/>
-        Premiered : ${show.premiered} - Ended : ${show.ended}</p>
+        Premiered : ${prem} - Ended : ${mEnd}</p>
     </div>
     <p class="showDates hideMob"><img src="https://img.icons8.com/external-flaticons-flat-circular-flat-icons/64/000000/external-estimate-engineering-flaticons-flat-circular-flat-icons.png" class="rate"/>
-      Premiered : ${show.premiered} - Ended : ${show.ended}</p>
+    Premiered : ${prem} - Ended : ${mEnd}</p>
     </div>
 
     <div id="commentSec" class"commentSection">
