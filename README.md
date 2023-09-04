@@ -5,7 +5,7 @@ See all the details about the movies and it's realse time. Comment and interact 
 
 ## Live Demo
 
-[Movies App](https://mov305.github.io/moviesC2/dist/)
+[Movies App](https://fastidious-rugelach-f85e51.netlify.app/)
 
 ## Introduction Video
 
